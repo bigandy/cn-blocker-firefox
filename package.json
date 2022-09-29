@@ -1,0 +1,11 @@
+{
+  "name": "cn-blocker-firefox",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "zip": "cd src && zip -r -X ../firefox-extension.zip * -x '**/.DS_Store'",
+    "del:zip": "rm firefox-extension.zip || true",
+    "release": "npm run del:zip && npm run zip"
+  }
+}
